@@ -32,6 +32,7 @@ const UserDetails = () => {
           <div className="user-details-grid">
             <div>
               <h2 style={{color:'#777'}}>Personal Information</h2>
+              <p><span className='label-text'>Username:</span> {user.username}</p>
               <p><span className='label-text'>Email:</span> {user.email}</p>
               <p><span className='label-text'>Phone:</span> {user.phone}</p>
               <p><span className='label-text'>Website:</span> {user.website}</p>
