@@ -1,0 +1,189 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.user-dashboard-title {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+  padding:8px 0px;
+  cursor: pointer;
+}
+
+.search-filter-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.search-input{
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.city-select{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.user-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.user-card:hover {
+  transform: scale(1.03);
+}
+
+.card-name-container{
+  cursor: pointer;
+  border:0px solid rgb(148, 148, 148);
+  border-bottom-width: 1px;
+}
+
+.user-card-name {
+  color: darkblue;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.user-card-name:hover {
+  color: #5a3ad6;
+}
+
+.label-text{
+  font-weight: bold;
+  color:darkbrown;
+}
+
+.user-details-outer-div{
+  width: 90%;
+  margin:auto;
+  max-width: 700px;
+}
+
+.user-details-container {
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1px 20px 20px 20px;
+}
+
+.user-details-container h1{
+  color:darkblue;
+  text-align:center;
+  border:0px solid darkblue;
+  border-bottom-width:1px;
+  border-radius:0px;
+  color:darkblue;
+}
+
+.back-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 5px 11px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 7px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.back-button:hover {
+  background-color: #2980b9;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-spinner div {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-message {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 15px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.error-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.user-details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .search-filter-container {
+    flex-direction: column;
+  }
+
+  .search-input, .city-select {
+    max-width: 100%;
+  }
+
+  .user-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .user-details-grid {
+    grid-template-columns: 1fr;
+  }
+}
